@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { BookModule } from './modules/book/book.module';
+import { HotelModule } from './modules/hotel/hotel.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { BookModule } from './modules/book/book.module';
       typePaths: ['./**/*.graphql'],
     }),
     BookModule,
+    HotelModule
   ],
   controllers: [AppController],
   providers: [AppService],
